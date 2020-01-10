@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="css/bootstrap.css" media="screen">
+  <link rel="stylesheet" href="css/custom.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Rubrica </title>
+</head>
+
+<body>
+  <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <div class="container">
+      <a href="../" class="navbar-brand">Rubrica 4.0</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav">          
+          <li class="nav-item">
+            <a class="nav-link" href="Titolo.html">Modifica Titoli</a>
+          </li>         
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="btn-group col-sm-2 mb-3">
+        <button id="dropbtn_title" type="text"  class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          Titolo
+        </button>
+        <div id="list_title" class="dropdown-menu" aria-labelledby="dropdownMenu">          
+        </div>
+      </div>
+      <div class="col-sm-7">
+        <div class="input-group mb-3">
+          <input type="text" id="completo" placeholder="Cognome, Nome, Telefono" class="form-control">
+          <div class="input-group-append">
+            <button type="text" id="aggiungi" class="btn btn-primary">
+              <span class="fa fa-plus-circle" style="font-size:18px"></span></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <button type="text" id="aggiungifull" class="btn btn-primary">Aggiungi</button>
+      </div>
+
+    </div>
+
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Titolo</th>
+          <th>Cognome</th>
+          <th>Nome</th>
+          <th>Telefono</th>
+          <th>Azione</th>
+        </tr>
+      </thead>
+      <tbody id="elenco">
+
+      </tbody>
+    </table>
+
+
+
+
+  </div>
+
+
+
+
+
+  <!-- Button trigger modal -->
+
+  <!--
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+  Launch static backdrop modal
+</button>
+
+<button id="testbtn" class="btn btn-primary">Test Pulsante</button>
+-->
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+            <span id="staticBackdropLabel">Modifica Titolo</span>
+            &nbsp;<span class="badge badge-primary" id="dialog_id">0000</span>
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-3">
+              <select id="dialog_title" class="form-control"  aria-labelledby="dropdownMenu">                
+              </select>            
+            </div>
+            <div class="col-sm-3">
+              <input type="text" id="dialog_cognome" placeholder="Cognome" class="form-control">
+            </div>
+            <div class="col-sm-3">
+              <input type="text" id="dialog_nome" placeholder="Nome" class="form-control">
+            </div>
+            <div class="col-sm-3">
+              <input type="text" id="dialog_telefono" placeholder="Telefono" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button id="save" type="button" class="btn btn-primary">Salva</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.js/dist/umd/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/custom.js"></script>
+  
+  <script src="helper.js"></script>
+  <script src="model.js"></script>
+  <script src="RubricaController.js"></script>
+  <script src="TitoloController.js"></script>  
+  <script src="RubricaView.js"></script>
+
+</body>
+
+</html>
